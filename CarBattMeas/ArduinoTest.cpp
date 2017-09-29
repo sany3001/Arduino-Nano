@@ -19,7 +19,7 @@ void loop()
 	// take a number of analog samples and add them up
 	while (sample_count < NUM_SAMPLES)
 	{
-		sum += analogRead(A2);
+		sum += analogRead(A7);
 		sample_count++;
 		delay(10);
 	}
