@@ -27,6 +27,8 @@ void loop()
 	// use 5.0 for a 5.0V ADC reference voltage
 	// 5.015V is the calibrated reference voltage
 	voltage = ((float) sum / (float) NUM_SAMPLES * 5.015) / 1024.0;
+	// range change (12V measured on 5V via 50:250 divider)
+	voltage *= 4.064935;
 	// send voltage for display on Serial Monitor
 	Serial.print(voltage);
 	Serial.println(" V");
